@@ -1,0 +1,8 @@
+[package]
+name = "verband"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rust_decimal = "1.34"
+rust_decimal_macros = "1.34"
