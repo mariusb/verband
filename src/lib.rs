@@ -29,9 +29,10 @@ pub fn calculate_monthly_payment(
     }
 
     let numerator = principal * monthly_rate;
-    let base = (dec!(1) + monthly_rate).to_f64().unwrap();
-    let exponent = -months.to_f64().unwrap();
-    let denominator = dec!(1) - Decimal::from_f64(base.powf(exponent)).unwrap();
+    let one = dec!(1);
+    let base = one + monthly_rate;
+    let exponent = -months;
+    let denominator = one - base.powd(exponent);
 
     numerator / denominator
 }

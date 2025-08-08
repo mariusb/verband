@@ -1,8 +1,8 @@
 [package]
 name = "verband"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
-rust_decimal = "1.34"
+rust_decimal = { version = "1.34", features = ["maths"] }
 rust_decimal_macros = "1.34"
